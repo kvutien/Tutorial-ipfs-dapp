@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+# Full stack blockchain IPFS and React tutorial
+## In this tutorial we'll store a file in IFPS and its hash on Ropsten, starting from Create React App boilerplate.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+*(Written in May 2021)*
 
-## Available Scripts
+This project is the simplest possible example of dApp using blockchain + IPFS + React. A kind of blockchain IPFS "Hello World" but Full Stack. This dApp takes a file of your choice, stores it on IPFS, stores the IPFS hash of this file in a Ethereum smart contract residing on the testnet Ropsten.
 
-In the project directory, you can run:
+It started from [this tutorial](https://www.freecodecamp.org/news/hands-on-get-started-with-infura-and-ipfs-on-ethereum-b63635142af0/) and modified it to correct some mistakes and compatible with the latest versions of React, Bootstrap, IPFS, Remix and nodeJS packages.
 
-### `yarn start`
+It is part of a series of articles to convince you, IT people working for humanitarians, that blockchain programming is not so daunting and can bring a lot of benefits. Join us in project *[Machu Picchu](https://kvutien-yes.medium.com/machu-picchu-how-the-blockchain-can-help-persons-in-need-8396820d13d1)*.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+This demo was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). We added progressively packages to make it run. To use it, simply follow the setup instructions below. To reproduce the coding yourself, follow the tutorial.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Setup
+The setup instructions use the console utility (`Terminal.app`) from MacOS. The setup instructions are the same if you use Linux Ubuntu. 
 
-### `yarn test`
+Under Windows, it is strongly recommended to use a Ubuntu Virtual Machine, running inside [VirtualBox](https://www.virtualbox.org/wiki/Downloads) for Windows. Here is a YouTube video of 4 minutes, that can guide you through this double installation process: https://youtu.be/8mns5yqMfZk.
+### Overall environment setup, using MacOS
+* Install [Brew](https://brew.sh/)
+* Install nodeJS via brew: `brew install node@14.17.0`  (this version of nodeJS is the last long term stable support)
+* Install a browser that is compatible with Metamask, like Chrome or Firefox. Chrome has better debugging tools.
+  * If you use MacOS, Chrome is available from [here](https://support.google.com/chrome/answer/95346?)
+  * If you use Ubuntu, download ans install as below
+``` bash
+        $ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+        $ sudo apt install ./google-chrome-stable_current_amd64.deb
+```
+* Install Metamask extension for your browser and feed one account with some ETH on testnet Ropsten. Select this account.
+  * [video guide to install Metamask:](https://youtu.be/WAStJtjYI_c) 
+  * [faucet to request test ETH fo Ropsten:](https://faucet.metamask.io/)
+### Setup this specific dApp, using MacOS
+* Clone this repository
+``` bash
+$ git clone https://github.com/kvutien/ipfs-dapp.git
+    Cloning into 'ipfs-dapp'...
+    remote: Enumerating objects: 39, done.
+    remote: Counting objects: 100% (39/39), done.
+    remote: Compressing objects: 100% (32/32), done.
+    remote: Total 39 (delta 7), reused 39 (delta 7), pack-reused 0
+    Receiving objects: 100% (39/39), 408.89 KiB | 10.22 MiB/s, done.
+    Resolving deltas: 100% (7/7), done.
+$ cd ipfs-dapp
+```
+* install the dependencies
+``` bash
+$ npm install
+    ...
+    found 566 vulnerabilities (1 low, 565 high)
+    run `npm audit fix` to fix them, or `npm audit` for details
+$
+```
+* disregard the warnings. Run the demo by typing
+``` bash
+$ npm start
+```
+* your browser will open a new tab and display
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![screenshot](./screenshot.png)
 
-### `yarn build`
+* make sure that your browser has a Metamask extension, that Metamask is using the tesnet Ropsten with an account that has some ETH. Else the transaction will be refused and you have to refresh the screen to reload the dApp.
+* **hint**: if you leave the default Metamask gas price of 1 gwei, the storage transaction will take some time on Ropsten to be included in a mined block, specially during peak hours because Ropsten's consensus uses Proof of Work. Wait for the spinner to stop pulsing before using button 3.
+  
+## What's next?
+This dApp was created using `create-react-dapp`, the generic tool provided by the React team to make a bare-bones React application, on which we manually added the `web3` package to make blockchain transactions and the `ipfs` package to use IPFS.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To be complete, you'll have soon a tutorial text to guide you through the pieces of code and get acquainted to blockchain programming and IPFS. In addition, it will also guide you to put your dApp in production on a public web server like Netlify.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+It is becoming easy to be a production Full Stack blockchain programmer. Stay tuned.
