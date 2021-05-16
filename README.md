@@ -21,7 +21,7 @@ This setup is an improvement of your configuration and serves many purposes, not
 * Install nodeJS via brew: `brew install node@14.17.0`  (this version of nodeJS is the last long term stable support)
 * Install a browser that is compatible with Metamask, like Chrome or Firefox. Chrome has better debugging tools.
   * If you use MacOS, Chrome is available from [here](https://support.google.com/chrome/answer/95346?)
-  * If you use Ubuntu, download ans install as below
+  * If you use Ubuntu, download and install as below
 ``` bash
         $ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
         $ sudo apt install ./google-chrome-stable_current_amd64.deb
