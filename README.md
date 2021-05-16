@@ -16,6 +16,7 @@ The setup instructions use the console utility (`Terminal.app`) from MacOS. The 
 
 Under Windows, it is strongly recommended to run a [VirtualBox](https://www.virtualbox.org/wiki/Downloads) for Windows and install a Ubuntu Virtual Machine inside it. Here is a YouTube video of 4 minutes, that can guide you through this double installation process: https://youtu.be/8mns5yqMfZk.
 ### Overall environment setup, using MacOS
+This setup is an improvement of your configuration and serves many purposes, not only this "_HelloWorld_" demo.
 * Install [Brew](https://brew.sh/)
 * Install nodeJS via brew: `brew install node@14.17.0`  (this version of nodeJS is the last long term stable support)
 * Install a browser that is compatible with Metamask, like Chrome or Firefox. Chrome has better debugging tools.
