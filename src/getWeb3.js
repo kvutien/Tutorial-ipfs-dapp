@@ -2,7 +2,8 @@ import Web3 from "web3";
 export default getWeb3;
 
 async function fromBrowser() {
-    let web3;       // web3 is scoped in the whole function
+    // checks which version of MetaMask is used and set the returned JSON accordingly
+    let web3;       // web3 scope is the whole function
     if(window.ethereum) {
         // Browser has new Metamask extension, we have to ask user permission
         web3 = new Web3(window.ethereum);
