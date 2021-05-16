@@ -5,7 +5,9 @@ This tutorial is a kind of "_Hello World_" that covers a Full Stack blockchain a
 1. In [Part 1](./TUTO-1.md) we've coded our smart contract and deployed it in production on the Ropsten test net.
 2. In [Part 2](./TUTO-2.md) we'll use the existing libraries and tools to scaffold a boilerplate React webapp and have it executing.
 3. In this part we'll add our actual code and run it locally.
-4. In Part 4 we'll deploy the frontend in production.
+4. In [Part 4](./TUTO-4.md) we'll deploy the frontend in production.
+
+If you are relatively new to blockchain, the jargon is explained [here](./TUTO-5.md).
 
 **Hint**: When you execute actions guided by this tutorial, if you need help on an error message, copy-paste the message on a search engine followed by `stack exchange`. Many other people have met the same issue before you and many answers have been given.
 
@@ -266,6 +268,7 @@ function App() {
                 `Failed to load web3. Check that Metamask connected this page to a blockchain account. Else see browser console for error details.`
             );
             console.error(error);
+            setLoading(false);
         }
     };
 
@@ -355,4 +358,4 @@ This concludes part 3 of the tutorial.
 2. You have added the code that is specific to IPFS and blockchain access.
 3. You have executed it.
 
-Now, deploy it in production, see part 4.
+Now, deploy it in production, see [Part 4](./TUTO-4.md).

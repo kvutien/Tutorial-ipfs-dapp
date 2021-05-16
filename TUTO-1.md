@@ -4,9 +4,9 @@ The github of IPFS in JavaScript is quite daunting for a beginner: https://githu
 
 This tutorial is a kind of "_Hello World_" that covers a Full Stack blockchain and IPFS workflow, including deployment in production. After you have completed it, you'd have deployed a blockchain smart contract on a public testnet, stored a file on IPFS using a web app that is publicly hosted. It is more ambitious than the usual tutorials that end up with a demo that only stays on your local computer.
 
-If you are relatively new to blockchain, the jargon is explained at the end of this article.
+If you are relatively new to blockchain, the jargon is explained [here](./TUTO-5.md).
 
-This tutorial is for you …
+### This tutorial is for you …
 * if you are a top-level manager, not impressed at all by the hype and looking for a VERY simple hands-on coding to prove it
 * if you want to see a Full Stack exercise, including deployment in production and not only a local demo
 * if you know a minimum about MetaMask, the most popular blockchain gateway (https://kvutien-yes.medium.com/metamask-for-beginners-d45029e01735)
@@ -15,27 +15,28 @@ Otherwise, you may prefer to just read through this article even if you don't in
 
 This hands-on requires that you have a computer with a Unix-like operating system like MacOS or Ubuntu. If you have Windows, you may want to install VirtualBox for Windows, plus the Extension Pack (https://www.virtualbox.org/wiki/Downloads) and then install Ubuntu inside a virtual machine. This is not difficult. Here is a YouTube video of 4 minutes, that can guide you through this double process: https://youtu.be/8mns5yqMfZk.
 
-**Hint**: When you execute actions guided by this tutorial, if you need help on an error message, copy-paste the message on a search engine followed by `stack exchange`. Many other people have met the same issue before you and many answers have been given.
+**Hint**: When you execute actions guided by this tutorial, if you need help on an error message, copy-paste the message on a search engine followed by `stack exchange`. Many other people have met the same issue before you and most answers have been already given.
 
 ## Contents of the tutorial dApp
+In this tutorial, you'll select a file, publish it on IPFS, retrieve the hash of this file and store it on the blockchain. You can think of a hash of a file on IPFS as the URL to retrieve it.
 ![Demo Scenario](./images/1-DemoScenario.png)
 
-## What are the steps?
+## What are the programming steps?
 The most direct steps to obtain a dApp deployed in production are:
 * (Preamble) Install MetaMask on your favorite browser (attention: Safari doesn't support MetaMask);
 * Use Remix to compile and deploy on a public testnet the smart contract that stores the IPFS hash in the blockchain;
 * Create a React frontend:
   * generate a scaffold with create-react-app,
   * import the necessary library code modules,
-  * write the glue code and try it from your browser with your MetaMask extension,
+  * write the glue code and try it locally from your browser with your MetaMask extension,
   * generate the build standalone of the frontend;
 * Drag-and-drop this build on a free hosting web service (in our case we use Netlify).
 
 This part 1 ends after we've deployed the smart contracts on Ropsten.
 
-Part 2 and part 3 cover the frontend executing locally.
+[Part 2](./TUTO-2.md) and [Part 3](./TUTO-3.md) guide you to have a frontend executing locally.
 
-Part 4 covers the public deployment on a hosting service, using the free tier.
+[Part 4](./TUTO-4.md) covers the public deployment on a hosting service, using the free tier.
 
 ![Building blocks](./images/2-BuildingBlocks.png)
 
@@ -76,7 +77,7 @@ To compile the smart contract, click on the icon "Solidity compiler" (1), select
 ![Remix compiler](./images/4-Remix2.png)
 
 ### Copy the ABI of the smart contract
-The ABI (Application Binary Interface), is how you call functions in a smart contract from a frontend and get data back. Once the smart contract is compiled, scroll down the left column of Remix and click on the icon "Copy ABI to clipboard". Save it somewhere in a text file, we'll need to copy it back later in the JavaScript of the frontend. 
+The ABI (Application Binary Interface), is the information with which you call functions in a smart contract from a frontend and get data back. Once the smart contract is compiled, scroll down the left column of Remix and click on the icon "Copy ABI to clipboard". Save it somewhere in a text file, we'll need to copy it back later in the JavaScript of the frontend. 
 ![Remix ABI](./images/5-Remix3.png)
 
 In this example, the ABI would be:

@@ -1,5 +1,5 @@
-# Full stack blockchain IPFS and React tutorial
-## In this tutorial we'll store a file in IFPS and its hash on Ropsten, starting from Create React App boilerplate.
+# Full stack blockchain IPFS and React example
+## In this example we'll store a file in IFPS and its hash on Ropsten, starting from Create React App boilerplate.
 
 *(Written in May 2021)*
 
@@ -9,7 +9,7 @@ It started from [this tutorial](https://www.freecodecamp.org/news/hands-on-get-s
 
 It is part of a series of articles intended to convince you, IT people working for humanitarians, that blockchain programming is not so daunting and can lower your operating costs while bringing a lot of benefits. Join us in project *[Machu Picchu](https://kvutien-yes.medium.com/machu-picchu-how-the-blockchain-can-help-persons-in-need-8396820d13d1)*.
 
-This demo was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). We added progressively packages to make it run. To use it, simply follow the setup instructions below. To reproduce the coding yourself, follow the [tutorial](TUTO-1.md) (in progress).
+This demo was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). We added progressively packages to make it run. To use it, simply follow the setup instructions below. To reproduce the coding yourself, follow the [coding tutorial](TUTO-1.md) (in progress).
 
 ## Setup
 The setup instructions use the console utility (`Terminal.app`) from MacOS. The setup instructions are the same if you use Linux Ubuntu. 
@@ -64,6 +64,6 @@ $ npm start
 ## What's next?
 This dApp was created using `create-react-dapp`, the generic tool provided by the React team to make a bare-bones React application. From that we manually added the `web3` package to make blockchain transactions and the `ipfs-http-client` package to use IPFS.
 
-To be complete, you'll have soon a [tutorial](./TUTO-1.md) text to guide you through the pieces of code and get acquainted to blockchain programming and IPFS. In addition, it will also guide you to put your dApp in production on a public web hosting service like Netlify.
+To be complete, you have a [tutorial here](./TUTO-1.md) to guide you through the pieces of code and get acquainted to blockchain programming and IPFS. In addition, it will also guide you to put your dApp in production on a public web hosting service like Netlify.
 
 It is becoming easy to be a production Full Stack blockchain programmer. Stay tuned.

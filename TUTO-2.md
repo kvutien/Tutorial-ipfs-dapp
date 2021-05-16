@@ -5,7 +5,9 @@ This tutorial is a kind of "_Hello World_" that covers a Full Stack blockchain a
 1. In [Part 1](./TUTO-1.md) we've coded our smart contract and deployed it in production on the Ropsten test net.
 2. In this part we'll use the existing libraries and tools to scaffold a boilerplate React webapp and have it executing.
 3. In [Part 3](./TUTO-3.md) we'll add our actual code and run it locally.
-4. In Part 4 we'll deploy the frontend in production.
+4. In [Part 4](./TUTO-4.md) we'll deploy the frontend in production.
+
+If you are relatively new to blockchain, the jargon is explained [here](./TUTO-5.md).
 
 **Hint**: When you execute actions guided by this tutorial, if you need help on an error message, copy-paste the message on a search engine followed by `stack exchange`. Many other people have met the same issue before you and many answers have been given.
 
@@ -42,7 +44,7 @@ In this tutorial we use the latest recommendation from the React team (as of May
 Once the frontend web app is constructed and working locally, we "build" the app (pack it into a standalone folder) and upload it to a public hosting service to deploy in production. In this tutorial we use Netlify hosting service.
 
 In our console, we type the following steps to create our React web app:
-```
+```shell
 $ npx create-react-app ipfs-dapp:       generate scaffold
 $ cd ipfs-dapp:                         move inside the working folder
 $ npm install react-bootstrap bootstrap: add CSS framework and its React helper
@@ -60,12 +62,12 @@ This is one difficulty when doing coding with open-source tools: version compati
 
 ## Install the boilerplate of a React web app
 Let's use the  tool `create-react-dapp` to create a folder that we named `ipfs-dapp` and populate it with all the JavaScript packages in `node_modules` and code to make a minimum React application. To do so, type the following command 
-```
+```shell
 npx create-react-app ipfs-dapp
 ```
 You'll see the answer showing that a folder `ipfs-dapp` is created, containing a git database:
-```zsh
-kvutien@VTKT5 development % npx create-react-app ipfs-dapp
+```shell
+$ npx create-react-app ipfs-dapp
     Need to install the following packages:
     create-react-app
     Ok to proceed? (y) y
@@ -83,9 +85,9 @@ kvutien@VTKT5 development % npx create-react-app ipfs-dapp
     Happy hacking!
 ```
 Let's move into the created folder and see what it contains
-```zsh
-kvutien@VTKT5 development % cd ipfs-dapp
-kvutien@VTKT5 ipfs-dapp % tree
+```shell
+$ cd ipfs-dapp
+$ tree
     .
     ├── README.md
     ├── node_modules
@@ -118,17 +120,17 @@ Congratulations. Your first React application.
 
 ## Install dependencies
 Now we have to install the dependencies of our own frontend: `react-bootstrap`, `bootstrap`,`fs-extra`, `ipfs-http-client`, `web3`, and `react-spinners`.
-```zsh
-kvutien@VTKT5 ipfs-dapp % npm install react-bootstrap bootstrap
+```shell
+$ npm install react-bootstrap bootstrap
     ...
     added 23 packages, removed 4 packages, changed 7 packages, and audited 1720 packages in 14s
     82 moderate severity vulnerabilities
-kvutien@VTKT5 ipfs-dapp % npm install fs-extra
+$ npm install fs-extra
     removed 19 packages, and audited 1701 packages in 5s
-kvutien@VTKT5 ipfs-dapp % npm install ipfs-http-client web3
+$ npm install ipfs-http-client web3
     ...
     added 267 packages, changed 1 package, and audited 1968 packages in 24s
-kvutien@VTKT5 ipfs-dapp % npm install react-spinners
+$ npm install react-spinners
     added 18 packages, and audited 1986 packages in 8s
 ```
 ## What have we learned?
@@ -137,4 +139,4 @@ This concludes part 2 of the tutorial.
 2. You have executed it.
 3. You have prepared the actual coding by installing dependencies.
 
-Now come the true changes to the frontend. see Part 3, and deploy it in production, see part 4.
+Now come the true changes to the frontend. see [Part 3](./TUTO-3.md), and deploy it in production, see [Part 4](./TUTO-4.md).
