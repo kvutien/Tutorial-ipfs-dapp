@@ -64,6 +64,6 @@ $ npm start
 ## What's next?
 This dApp was created using `create-react-dapp`, the generic tool provided by the React team to make a bare-bones React application. From that we manually added the `web3` package to make blockchain transactions and the `ipfs-http-client` package to use IPFS.
 
-To be complete, you'll have soon a tutorial text to guide you through the pieces of code and get acquainted to blockchain programming and IPFS. In addition, it will also guide you to put your dApp in production on a public web server like Netlify.
+To be complete, you'll have soon a tutorial text to guide you through the pieces of code and get acquainted to blockchain programming and IPFS. In addition, it will also guide you to put your dApp in production on a public web hosting service like Netlify.
 
 It is becoming easy to be a production Full Stack blockchain programmer. Stay tuned.
