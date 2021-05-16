@@ -76,6 +76,7 @@ function App() {
                 `Failed to load web3. Check that Metamask connected this page to a blockchain account. Else see browser console for error details.`
             );
             console.error(error);
+            setLoading(false);
         }
     };
 
