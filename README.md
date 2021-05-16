@@ -9,7 +9,7 @@ It started from [this tutorial](https://www.freecodecamp.org/news/hands-on-get-s
 
 It is part of a series of articles intended to convince you, IT people working for humanitarians, that blockchain programming is not so daunting and can bring a lot of benefits. Join us in project *[Machu Picchu](https://kvutien-yes.medium.com/machu-picchu-how-the-blockchain-can-help-persons-in-need-8396820d13d1)*.
 
-This demo was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). We added progressively packages to make it run. To use it, simply follow the setup instructions below. To reproduce the coding yourself, follow the tutorial.
+This demo was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). We added progressively packages to make it run. To use it, simply follow the setup instructions below. To reproduce the coding yourself, follow the tutorial (in progress).
 
 ## Setup
 The setup instructions use the console utility (`Terminal.app`) from MacOS. The setup instructions are the same if you use Linux Ubuntu. 
