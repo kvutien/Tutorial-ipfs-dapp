@@ -3,11 +3,11 @@
 
 *(Written in May 2021)*
 
-This project is the simplest possible example of a Full Stack dApp using blockchain + IPFS + React. A kind of blockchain IPFS "Hello World" but Full Stack. This dApp takes a file of your choice, uploads it on IPFS, stores the IPFS hash of this file in a Ethereum smart contract residing on the testnet Ropsten.
+This project is the simplest possible example of a Full Stack dApp using blockchain + IPFS + React. A kind of blockchain IPFS "_Hello World_" but Full Stack. This dApp takes a file of your choice, uploads it on IPFS, stores the IPFS hash of this file in a Ethereum smart contract residing on the testnet Ropsten.
 
 It started from [this tutorial](https://www.freecodecamp.org/news/hands-on-get-started-with-infura-and-ipfs-on-ethereum-b63635142af0/) and modified it to correct some mistakes and compatible with the latest versions of React, Bootstrap, IPFS, Remix and nodeJS packages.
 
-It is part of a series of articles intended to convince you, IT people working for humanitarians, that blockchain programming is not so daunting and can bring a lot of benefits. Join us in project *[Machu Picchu](https://kvutien-yes.medium.com/machu-picchu-how-the-blockchain-can-help-persons-in-need-8396820d13d1)*.
+It is part of a series of articles intended to convince you, IT people working for humanitarians, that blockchain programming is not so daunting and can lower your operating costs while bringing a lot of benefits. Join us in project *[Machu Picchu](https://kvutien-yes.medium.com/machu-picchu-how-the-blockchain-can-help-persons-in-need-8396820d13d1)*.
 
 This demo was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). We added progressively packages to make it run. To use it, simply follow the setup instructions below. To reproduce the coding yourself, follow the tutorial (in progress).
 
