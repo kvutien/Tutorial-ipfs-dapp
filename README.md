@@ -14,7 +14,7 @@ This demo was bootstrapped with [Create React App](https://github.com/facebook/c
 ## Setup
 The setup instructions use the console utility (`Terminal.app`) from MacOS. The setup instructions are the same if you use Linux Ubuntu. 
 
-Under Windows, it is strongly recommended to use a Ubuntu Virtual Machine, running inside [VirtualBox](https://www.virtualbox.org/wiki/Downloads) for Windows. Here is a YouTube video of 4 minutes, that can guide you through this double installation process: https://youtu.be/8mns5yqMfZk.
+Under Windows, it is strongly recommended to run a [VirtualBox](https://www.virtualbox.org/wiki/Downloads) for Windows and install a Ubuntu Virtual Machine inside it. Here is a YouTube video of 4 minutes, that can guide you through this double installation process: https://youtu.be/8mns5yqMfZk.
 ### Overall environment setup, using MacOS
 * Install [Brew](https://brew.sh/)
 * Install nodeJS via brew: `brew install node@14.17.0`  (this version of nodeJS is the last long term stable support)
