@@ -59,7 +59,7 @@ $ npm start
 ![screenshot](./screenshot.png)
 
 * make sure that your browser has a Metamask extension, that Metamask is using the tesnet Ropsten with an account that has some ETH. Else the transaction will be refused and you have to refresh the screen to reload the dApp.
-* **hint**: if you leave the default Metamask gas price of 1 gwei, the storage transaction will take some time on Ropsten to be included in a mined block, specially during peak hours because Ropsten's consensus uses Proof of Work. Wait for the spinner to stop pulsing before using button 3.
+* **hint**: if you leave the default Metamask gas price of 1 gwei, the storage transaction will take some time on Ropsten to be included in a mined block, specially during peak hours because even if Ropsten is a test net, its logic reproduces the logic of the main net and favors transactions with high gas price. Wait for the spinner to stop pulsing before using button 3.
   
 ## What's next?
 This dApp was created using `create-react-dapp`, the generic tool provided by the React team to make a bare-bones React application, on which we manually added the `web3` package to make blockchain transactions and the `ipfs` package to use IPFS.
