@@ -62,7 +62,7 @@ $ npm start
 * **hint**: if you leave the default Metamask gas price of 1 gwei, the storage transaction will take some time on Ropsten to be included in a mined block, specially during peak hours because even if Ropsten is a test net, its logic reproduces the logic of the main net and favors transactions with high gas price. Wait for the spinner to stop pulsing before using button 3.
   
 ## What's next?
-This dApp was created using `create-react-dapp`, the generic tool provided by the React team to make a bare-bones React application, on which we manually added the `web3` package to make blockchain transactions and the `ipfs` package to use IPFS.
+This dApp was created using `create-react-dapp`, the generic tool provided by the React team to make a bare-bones React application. From that we manually added the `web3` package to make blockchain transactions and the `ipfs` package to use IPFS.
 
 To be complete, you'll have soon a tutorial text to guide you through the pieces of code and get acquainted to blockchain programming and IPFS. In addition, it will also guide you to put your dApp in production on a public web server like Netlify.
 
