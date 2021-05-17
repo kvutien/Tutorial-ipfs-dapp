@@ -2,7 +2,6 @@ import './App.css';
 import logo from './logo.svg';
 
 import React, { useState } from 'react';
-//import Contract from "./contracts/Contract.json";
 import getWeb3 from "./getWeb3";
 import ipfs from './ipfs';
 import storeHash from './storehash';
@@ -91,7 +90,7 @@ function App() {
             <header className="App-header">
                 <img src={logo} alt="logo" className="App-logo" />
                 <h1 className="h1" >Ethereum and IPFS using Infura</h1>
-                <span  style={{color: '#980000', fontSize: 12}}><i>adapted from create-react-app (May 2021)</i></span>
+                <span  style={{color: '#980000', fontSize: '0.7em'}}><i>adapted from create-react-app (May 2021)</i></span>
                 <a className="App-link" target="_blank" rel="noopener noreferrer"
                 href='https://kvutien-yes.medium.com/machu-picchu-why-should-humanitarian-organizations-be-interested-in-using-blockchain-360bbfcb88f5'>
                 <i>offered to you by the Machu Picchu team</i></a>
