@@ -1,6 +1,6 @@
-# Tutorial Full Stack "_hello World_" - Part 1
+# Tutorial Full Stack "_hello World_" - Part 1: smart contract
 ## Why this tutorial?
-The github of IPFS in JavaScript is quite daunting for a beginner: https://github.com/ipfs/js-ipfs.git. The same holds for the Ethereum and Infura explanations. A benediction for the geeks, but quite a steep move for the newcomers.
+The github of IPFS in JavaScript is quite daunting for a beginner: https://github.com/ipfs/js-ipfs.git. The same holds for the Ethereum and Infura explanations in their respective docs. A benediction for the geeks, but quite a steep move for the newcomers.
 
 This tutorial is a kind of "_Hello World_" that covers a Full Stack blockchain and IPFS workflow, including deployment in production. After you have completed it, you'd have deployed a blockchain smart contract on a public testnet, stored a file on IPFS using a web app that is publicly hosted. It is more ambitious than the usual tutorials that end up with a demo that only stays on your local computer.
 
@@ -15,7 +15,7 @@ Otherwise, you may prefer to just read through this article even if you don't in
 
 This hands-on requires that you have a computer with a Unix-like operating system like MacOS or Ubuntu. If you have Windows, you may want to install VirtualBox for Windows, plus the Extension Pack (https://www.virtualbox.org/wiki/Downloads) and then install Ubuntu inside a virtual machine. This is not difficult. Here is a YouTube video of 4 minutes, that can guide you through this double process: https://youtu.be/8mns5yqMfZk.
 
-**Hint**: When you execute actions guided by this tutorial, if you need help on an error message, copy-paste the message on a search engine followed by `stack exchange`. Many other people have met the same issue before you and most answers have been already given.
+**Hint**: When you execute actions guided by this tutorial, if you need any help on an error message, copy-paste the message on a search engine followed by `stack exchange`. Many other people have met the same issue before you and most answers have been already given on the Internet.
 
 ## Contents of the tutorial dApp
 In this tutorial, you'll select a file, publish it on IPFS, retrieve the hash of this file and store it on the blockchain. You can think of a hash of a file on IPFS as the URL to retrieve it.
@@ -26,9 +26,9 @@ The most direct steps to obtain a dApp deployed in production are:
 * (Preamble) Install MetaMask on your favorite browser (attention: Safari doesn't support MetaMask);
 * Use Remix to compile and deploy on a public testnet the smart contract that stores the IPFS hash in the blockchain;
 * Create a React frontend:
-  * generate a scaffold with create-react-app,
+  * generate a scaffold with `create-react-app`,
   * import the necessary library code modules,
-  * write the glue code and try it locally from your browser with your MetaMask extension,
+  * write (or copy-paste) the glue code and try it locally from your browser with your MetaMask extension,
   * generate the build standalone of the frontend;
 * Drag-and-drop this build on a free hosting web service (in our case we use Netlify).
 
@@ -36,7 +36,7 @@ This part 1 ends after we've deployed the smart contracts on Ropsten.
 
 [Part 2](./TUTO-2.md) and [Part 3](./TUTO-3.md) guide you to have a frontend executing locally.
 
-[Part 4](./TUTO-4.md) covers the public deployment on a hosting service, using the free tier.
+[Part 4](./TUTO-4.md) covers the public deployment on a hosting service, using the free tier of this commercial service.
 
 ![Building blocks](./images/2-BuildingBlocks.png)
 
@@ -124,24 +124,24 @@ There are several mouse clicks to do. It's a full blockchain production deployme
 6. in the drop-down menu, select the environment "Injected Web3" (6);
 7. verify that indeed Remix has recognized the Ropsten network and show network ident 3 (7);
 8. verify that Remix is using the right account number to execute the deployment (8);
-9. verify that the contract that will be deployed is the one we want, here Contract. Click on the button "Deploy" (9).
+9. verify that the contract that will be deployed is the one we want, here `Contract`. Click on the button "Deploy" (9).
 ![Remix deploy](./images/6-Remix4.png)
 
-Metamask will display a pop-up asking us to confirm that we accept to pay for the transaction that will deploy the smart contract. Click "Confirm".
+MetaMask will display a pop-up asking us to confirm that we accept to pay for the transaction that will deploy the smart contract. Click "Confirm".
 ![Remix Metamask confirm](./images/7-Remix5.png)
 
 After a few seconds, the time it takes for the transaction to be included in a block and recorded on blockchain, Remix will display the address where the contract is deployed on blockchain Ropsten and available for execution. Click on the link to `etherscan.io` (arrow) to see how the deployment is witnessed by the community.
-![Remix Metamask confirm](./images/8-Remix6.png)
+![Remix MetaMask confirm](./images/8-Remix6.png)
 
 Click on the icon "Copy value to clipboard" and save it in a text file for later use in the frontend. In our case, the deployed smart contract is at: `0x01A619843Dd6Ea06c863d8033312eaF36669DB90`. We'll see it later in the file `storehash.js`
 
 ## What have we learned?
 This concludes part 1 of the tutorial. 
-1. You have deployed in production a smart contract on the blockchain.
-2. You have copied the ABI (Application Binary Interface) of your smart contract for use in the JavaScript frontend
-3. You have copied the public address of your smart contract on the blockchain.
+1. You have deployed in production a smart contract on the blockchain, using Infura.
+2. You have copied the ABI (Application Binary Interface) of your smart contract for use in the JavaScript frontend.
+3. You have copied the public address of your smart contract on the blockchain for use in the JavaScript frontend.
 
-The next step is to program the frontend and deploy it also in production.
+The next steps are to program the frontend and also deploy it in production.
 
 ## Summary of the blockchain production deployment magic
 We did the following with a few clicks on a browser page with an extension.

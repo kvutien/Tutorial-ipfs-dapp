@@ -1,6 +1,6 @@
-# Tutorial Full Stack "_hello World_" - Part 3
+# Tutorial Full Stack "_hello World_" - Part 3: add our code
 ## Why this tutorial?
-This tutorial is a kind of "_Hello World_" that covers a Full Stack blockchain and IPFS workflow, including deployment in production. After you have completed it, you'd have deployed a blockchain smart contract on a public testnet, stored a file on IPFS using a web app that is publicly hosted. It is more ambitious than the usual tutorials that end up with a demo that only stays on your local computer. Here we go one step further, in production.
+This 4-part tutorial is a kind of "_Hello World_" that covers a Full Stack blockchain and IPFS workflow, including deployment in production. After you have completed it, you'd have deployed a blockchain smart contract on a public testnet, stored a file on IPFS using a web app that is publicly hosted. It is more ambitious than the usual tutorials that end up with a demo that only stays on your local computer. Here we go one step further, in production.
 
 1. In [Part 1](./TUTO-1.md) we've coded our smart contract and deployed it in production on the Ropsten test net.
 2. In [Part 2](./TUTO-2.md) we'll use the existing libraries and tools to scaffold a boilerplate React webapp and have it executing.
@@ -9,7 +9,7 @@ This tutorial is a kind of "_Hello World_" that covers a Full Stack blockchain a
 
 If you are relatively new to blockchain, the jargon is explained [here](./TUTO-5.md).
 
-**Hint**: When you execute actions guided by this tutorial, if you need help on an error message, copy-paste the message on a search engine followed by `stack exchange`. Many other people have met the same issue before you and many answers have been given.
+**Hint**: When you execute actions guided by this tutorial, if you need help on any error message, copy-paste the message on a search engine followed by `stack exchange`. Many other people have met the same issue before you and many answers have been given on the Internet.
 
 > _This tutorial will contain explanations that are not directly related to the coding task. These explanations will be highlighted as "Insider Notes". You can skip reading them without damage to the coding._
 
@@ -27,7 +27,9 @@ const ipfs = IPFS.create({
 export default ipfs;
 ```
 ## File 2 — `src/getWeb3.js`
-This is a new file. It contains a component that returns the "provider" which is a JavaScript object containing the API calls to do blockchain transactions via JSON-RPC calls with a blockchain node. Its logic covers the cases where the dApp is called from the new version of MetaMask, from an old version of MetaMask and where the dApp runs without MetaMask on a local test blockchain network.
+This is a new file. It contains a component that returns a JavaScript object. The key/value pairs of this object describe the API calls to a blockchain node that do transactions. This object is called a "Provider".
+
+The logic of these functions covers the cases where the dApp is called from the new version of MetaMask, from an old version of MetaMask and where the dApp runs without MetaMask on a local test blockchain network.
 ```javascript
 import Web3 from "web3";
 export default getWeb3;
@@ -74,10 +76,12 @@ getWeb3();
 ## File 3 — `src/storehash.js`
 This new file contains a function that creates the JavaScript instance discussing with the smart contract. 
 
-Code sections to change: In the definition of the `const address = '...'`, copy-paste the address of the contract that Remix deployed on Ropsten. In the definition of the array `const abi = [...]`, copy-paste the ABI as compiled by Remix. We have copied and saved these information in [Part 1](./TUTO-1.md).
+Code sections you need to customize:
+* In the definition of the `const address = '...'`, copy-paste the address of the contract that you made Remix deploy on Ropsten in [Part 1](./TUTO-1.md).
+* In the definition of the array `const abi = [...]`, copy-paste the ABI as compiled by Remix. We have copied and saved these information in [Part 1](./TUTO-1.md).
 ```javascript
 import getWeb3 from "./getWeb3";
-// export an instance of the smart contract that stores IPFS hash
+// export a javaScript instance connecting to the smart contract that stores/retrieves IPFS hash
 
 async function storehash() { 
     // Your contract address as deployed by Remix
@@ -123,7 +127,7 @@ This modification is purely cosmetic and changes the generic text that is displa
 ```
 is replaced by
 ```html
-    <title>Truffle React IPFS</title>
+    <title>IPFS React dApp</title>
 ```
 ## Edit — `App.css`
 This file is the CSS cosmetics of our dApp. There is very little change from the original made by `create-react-app`: the background color and font size and color.
@@ -176,14 +180,28 @@ This file is the CSS cosmetics of our dApp. There is very little change from the
   font-size: 0.4em;
 }
 ```
-## Insider Notes: JavaScript ES6
+## _Insider Note_: JavaScript ES6
 _You can skip this section if you are only interested in doing the results of the coding._
 
-React relies enormously on the new language construct of JavaScript ES6. Since not all browsers support yet JavaScript ES6, React uses the transpiler `Babel` to convert the code into a version of JavaScript that is supported by all browsers. You will meet very often the following constructs:
+React relies enormously on the new language construct of JavaScript ES6 (ECMAScript 6). Since not all browsers support yet ES6, React uses the transpiler `Babel` to convert the code into a version of JavaScript that is supported by all browsers. You will meet very often the following ES6 constructs:
 * `import` instead of `require`: this allows the bundler `webpack` to include only specified functions of a module instead of including the whole module. More compact code.
 * arrow functions: more compact code and easier to read once you get used to it. Also, arrow functions use a subset of the execution context as compared to normal functions. Example of constructs: `const output = (input) => {do something with input, return output}`
-* `async` functions inside which we can do `await` calls to asynchronous functions. When it meets an `await` call, the interpretor doesn't execute the next statement until the called asynchronous function returns. This simplifies asynchronous programming as compared to `promises`.
+* `async` functions: inside an `async` function we can do `await` calls to asynchronous functions. When it meets an `await` call, the interpretor doesn't execute the next statement until the called asynchronous function returns. This simplifies asynchronous programming as compared to `promises`.
+* `spread operator`:  spread syntax refers to the use of an ellipsis of three dots ( … ) to expand an iterable object into the list. For example
+  ```javascript
+    const car = [{brand: 'Honda', type: 'Civic'}, {brand: 'Ferrari', type: 'Testarossa'}];
+    repair({...car});
+  ```
 * in addition to `var` declaration, we have `const` and `let`. This makes more efficient code interpretation.
+
+## _Insider Note_: Infura, IPFS nodes and IPFS databases
+_You can skip this section if you are only interested in doing the results of the coding._
+
+Before 2017, when you want to do transaction with the blockchain, you need to run a node, connect it to the Internet and send transactions to it. Today, there are blockchain access services like Infura, NodeSmith, Alchemy etc.
+
+Similarly, when you want to send a file to store on IPFS, you need to run an IPFS node yourself (a simple daemon), connect it to Internet and send your file to it. Naturally there is now a service to avoid you to do this: Infura. Using this service simplifies enormously this "_Hello World_" demo. 
+
+Actually, people use databases built over IPFS but using them would go being the purpose of this simple demo.
 
 ## Edit — `App.js`
 This class is the main application that uses React. Its template was created by `create-react-app`. We change it totally.
@@ -349,13 +367,14 @@ export default App;
 ```
 And that is all! 
 
-Type `npm start` and see the result in your browser.
+Type `npm start` and see the result in your browser. You see the same thing as if you cloned the github https://github.com/kvutien/ipfs-dapp.git, but here you have coded yourself the internals.
+
 ![Hello World](./screenshot.png)
 
 ## What have we learned?
 This concludes part 3 of the tutorial. 
 1. You have modified the code of the boilerplate.
-2. You have added the code that is specific to IPFS and blockchain access.
+2. You have added the code that is specific to IPFS access and blockchain access.
 3. You have executed it.
 
-Now, deploy it in production, see [Part 4](./TUTO-4.md).
+Now, let's deploy it in production, see [Part 4](./TUTO-4.md).
