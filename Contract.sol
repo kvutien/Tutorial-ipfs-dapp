@@ -3,7 +3,7 @@ pragma solidity ^0.6.0;
 
 /** 
  * @title Contract
- * @dev store IPFS hash of a file
+ * @dev store the IPFS hash of a file
  */
 contract Contract {
     string ipfsHash;
