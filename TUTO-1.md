@@ -7,7 +7,7 @@ This tutorial is a kind of "_Hello World_" that covers a Full Stack blockchain a
 If you are relatively new to blockchain, the jargon is explained [here](./TUTO-5.md).
 
 ### This tutorial is for you …
-* if you are a top-level manager, not impressed at all by the hype and looking for a VERY simple hands-on coding to prove it
+* if you are a top-level manager, not impressed at all by the hype about blockchain and IPFS, and looking for a VERY simple hands-on coding to prove it
 * if you want to see a Full Stack exercise, including deployment in production and not only a local demo
 * if you know a minimum about MetaMask, the most popular blockchain gateway (https://kvutien-yes.medium.com/metamask-for-beginners-d45029e01735)
 
