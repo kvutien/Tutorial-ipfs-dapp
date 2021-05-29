@@ -1,4 +1,4 @@
-# Tutorial Full Stack "_hello World_" - Part 3: add our code
+# Tutorial Full Stack "_hello World_" IPFS + blockchain - Part 3: add our code
 ## Why this tutorial?
 This 4-part tutorial is a kind of "_Hello World_" that covers a Full Stack blockchain and IPFS workflow, including deployment in production. After you have completed it, you'd have deployed a blockchain smart contract on a public testnet, stored a file on IPFS using a web app that is publicly hosted. It is more ambitious than the usual tutorials that end up with a demo that only stays on your local computer. Here we go one step further, in production.
 

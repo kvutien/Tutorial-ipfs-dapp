@@ -1,4 +1,4 @@
-# Tutorial Full Stack "_hello World_" - Part 1: smart contract
+# Tutorial Full Stack "_hello World_" IPFS + blockchain - Part 1: smart contract
 ## Why this tutorial?
 The github of IPFS in JavaScript is quite daunting for a beginner: https://github.com/ipfs/js-ipfs.git. The same holds for the Ethereum and Infura explanations in their respective docs. A benediction for the geeks, but quite a steep move for the newcomers.
 
