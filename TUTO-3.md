@@ -194,6 +194,8 @@ React relies enormously on the new language construct of JavaScript ES6 (ECMAScr
   ```
 * in addition to `var` declaration, we have `const` and `let`. This makes more efficient code interpretation.
 
+You have a [quick summary of modern JavaScript concepts here](https://medium.com/featurepreneur/6-must-know-javascript-es6-concepts-6bbf1b448228).
+
 ## _Insider Note_: Infura, IPFS nodes and IPFS databases
 _You can skip this section if you are only interested in doing the results of the coding._
 
@@ -201,7 +203,7 @@ Before 2017, when you want to do transaction with the blockchain, you need to ru
 
 Similarly, when you want to send a file to store on IPFS, you need to run an IPFS node yourself (a simple daemon), connect it to Internet and send your file to it. Naturally there is now a service to avoid you to do this: Infura. Using this service simplifies enormously this "_Hello World_" demo. 
 
-Actually, people use databases built over IPFS but using them would go being the purpose of this simple demo.
+Actually, people use databases built over IPFS but using them would go being the purpose of this simple demo. Stay tuned. Or you may anticipate and [learn by yourself here](https://github.com/orbitdb/field-manual/blob/main/01_Tutorial/00_Introduction.md).
 
 ## Edit — `App.js`
 This class is the main application that uses React. Its template was created by `create-react-app`. We change it totally.
