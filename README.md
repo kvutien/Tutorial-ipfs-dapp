@@ -2,6 +2,7 @@
 ## In this example we'll store a file in IFPS and its hash on Ropsten, starting from Create React App boilerplate.
 [![](https://img.shields.io/badge/license-MIT-green)](https://opensource.org/licenses/MIT)
 [![](https://img.shields.io/badge/project-machu----picchu-brightgreen)](https://github.com/Machu-Pichu/general.git)
+[![](https://img.shields.io/badge/usage-tutorial-lightgreen)](https://github.com/Machu-Pichu/general.git)
 
 *(Written in May 2021)*
 
