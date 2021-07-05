@@ -31,7 +31,7 @@ This setup is an improvement of your configuration and serves many purposes, not
 ```
 * Install Metamask extension for your browser and feed one account with some ETH on testnet Ropsten. Select this account.
   * [video guide to install Metamask:](https://youtu.be/WAStJtjYI_c) 
-  * [faucet to request test ETH fo Ropsten:](https://faucet.metamask.io/)
+  * [faucet to request test ETH for Ropsten:](https://faucet.metamask.io/)
 ### Setup this specific dApp, using MacOS
 * Clone this repository
 ``` bash
