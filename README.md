@@ -1,10 +1,21 @@
 # Full stack blockchain IPFS and React example
-## In this example we'll store a file in IFPS and its hash on Ropsten, starting from Create React App boilerplate.
+In this example we'll store a file in IFPS and its hash on Ropsten, starting from Create React App boilerplate.
 [![](https://img.shields.io/badge/license-MIT-green)](https://opensource.org/licenses/MIT)
 [![](https://img.shields.io/badge/project-machu----picchu-brightgreen)](https://github.com/Machu-Pichu/general.git)
 [![](https://img.shields.io/badge/usage-tutorial-lightgreen)](https://github.com/Machu-Pichu/general.git)
 
-*(Written in May 2021)*
+## *Warning of March 2023: this article is obsolete*
+In 2023, two years after this article was written, the development environment has changed a lot, making this article obsolete. If you are interested in learning full stack development using Ethereum and IPFS, I found the following resources:
+1. This article is from Feb 2023 so it should be up to date. Moralis is an automatic dApp generator service. It hides a lot of complexity but you are locked in using Moralis services. It's free for simple tutorial dApp but for real-life project, it is a paid service. https://moralis.io/ipfs-ethereum-tutorial-how-to-use-ipfs-with-ethereum/
+2. This one is also from Feb 2022 but it uses Polygon blockchain instead of Ethereum, and the testnet Mumbai of Polygon, so it should be agnostic of the Ethereum switch to PoS. The only drawback is that the tutorial is very ambitious, so the learning curve is steep. If you succeed, you'll know the most from this tutorial. https://dev.to/edge-and-node/the-complete-guide-to-full-stack-web3-development-4g74
+
+If you prefer a tutorial on YouTube, this one may also be helpful. It's not really fully usable for a real-life project because it uses a local blockchain instead of a public testnet, so it accepts only you as user. It uses PINATA for IPFS access, instead of infura. Otherwise, the code seems to work, but I haven't tried it: https://www.youtube.com/watch?v=1dWxCE_RfaE
+
+Hope it helps. If you are curious, I'm in the process of writing a much ambitious suite of articles how to learn Solidity using Remix. These articles are not complete yet, but when done, it will show how to use ERC20 (fungible) tokens, ERC721 (non fungible) tokens with IPFS, and ERC155 (multiple use) tokens.
+Here is the starting point: https://github.com/kvutien/Project-Machu_Picchu_White_Paper_Tutorial2023
+
+## *Initial article written in May 2021*
+
 
 This project is the simplest possible example of a Full Stack dApp using blockchain + IPFS + React. A kind of blockchain IPFS "_Hello World_" but Full Stack. This dApp takes a file of your choice, uploads it on IPFS, stores the IPFS hash of this file in a Ethereum smart contract residing on the testnet Ropsten.
 
